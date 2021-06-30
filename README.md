@@ -1,4 +1,4 @@
-# Moduit Backend - Coding Test
+# Moduit Frontend Web - Coding Test
 
 ## Instructions
 
