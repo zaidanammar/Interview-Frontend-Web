@@ -26,7 +26,9 @@ and display it into a grid (data table) like mock-up below:
 
 ## 2. Question Two
 Please create a page that sends request to this endpoint: **/frontend/web/question/two** \
-and display it into a grid with additonal function: pagination and search like mock-up below:
+and display it into a grid with additonal function: pagination and search (by title) like mock-up below:
+
+Note: there's no server filtering, you need to apply the filter in your code.
 
 ![Test 2](https://user-images.githubusercontent.com/64783737/123898656-e62a1380-d98f-11eb-924e-952287b2322b.png)
 
