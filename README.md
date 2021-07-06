@@ -5,10 +5,9 @@
 On this coding test, you need to create an React JS (**NextJS** preferred) application solution to solve all the questions below.\
 You can use any 3rd party library that is provided on **public** NPM repository.
 
-1. Clone this repository.
-2. Create new branch with prefix 'answer' followed by your name, example: answer/<your_name>
-3. All Assets (logo & icon) are provided in this repository. 
-4. After completing the tests, please push the code to your branch and notify the examiner.
+1. Please fork this project on branch **source**.
+2. All Assets (logo & icon) are provided in this repository. 
+3. After completing the tests, please push the code to your repository, notify and send your repository url to the examiner.
 
 You need to connect with our screening API on this URL:
 
