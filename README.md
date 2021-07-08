@@ -5,7 +5,7 @@
 On this coding test, you need to create an React JS (**NextJS** preferred) application solution to solve all the questions below.\
 You can use any 3rd party library that is provided on **public** NPM repository.
 
-1. Please fork this project on branch **source**.
+1. Please fork this project on branch **main**.
 2. All Assets (logo & icon) are provided in this repository. 
 3. After completing the tests, please push the code to your repository, notify and send your repository url to the examiner.
 
