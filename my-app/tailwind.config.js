@@ -6,7 +6,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '2xl': '0 25px 50px -12px rgba(230,250,255,255)',
+      }
+    },
   },
   plugins: [
     plugin(function ({
