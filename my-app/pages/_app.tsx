@@ -1,22 +1,23 @@
 import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-
-import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
-import Container from "../components/Container";
 import "../styles/globals.css";
 
+import MSidebar from "../components/molecules/MSidebar";
+import OLayout from "../components/organisms/OLayout";
+import OContainer from "../components/organisms/OContainer";
+
 const queryClient = new QueryClient();
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout>
-        <Sidebar />
-        <Container>
+      <OLayout>
+        <MSidebar />
+        <OContainer>
           <Component {...pageProps} />
-        </Container>
-      </Layout>
+        </OContainer>
+      </OLayout>
       <ReactQueryDevtools />
     </QueryClientProvider>
   );

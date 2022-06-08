@@ -8,7 +8,7 @@ type Props = {
   setPage: (page: number) => void;
 };
 
-const Pagination = ({ data, rowsPerPage, setPage, setRowsPerPage }: Props) => {
+const MPagination = ({ data, rowsPerPage, setPage, setRowsPerPage }: Props) => {
   const handleChangePage = (
     event: React.ChangeEvent<unknown>,
     value: number
@@ -49,4 +49,4 @@ const Pagination = ({ data, rowsPerPage, setPage, setRowsPerPage }: Props) => {
   );
 };
 
-export default Pagination;
+export default MPagination;

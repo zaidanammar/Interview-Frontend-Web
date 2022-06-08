@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: Props) => {
+const OLayout = ({ children }: Props) => {
   return (
     <main className="flex">
       <Head>
@@ -17,4 +17,4 @@ const Layout = ({ children }: Props) => {
   );
 };
 
-export default Layout;
+export default OLayout;

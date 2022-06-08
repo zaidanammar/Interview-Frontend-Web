@@ -1,26 +1,27 @@
 import React, { useState } from "react";
-import { Loading } from "../components/Loading";
-import Table from "../components/Table";
+
+import MTable from "../components/molecules/MTable";
+import { ALoading } from "../components/atoms/ALoading";
 import { useFetchQuestionOne } from "../hooks/question";
 
 const QuestionOne = () => {
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const { data, isLoading, isError } = useFetchQuestionOne();
+  const { data, isLoading } = useFetchQuestionOne();
 
   return (
     <section>
       <aside>
         <h3 className="text-textPrimary">Question 1</h3>
       </aside>
-      <article className="my-10">
+      <article className="my-14">
         {isLoading ? (
           <div className="flex justify-center">
-            <Loading />
+            <ALoading />
           </div>
         ) : (
           data && (
-            <Table
+            <MTable
               data={data}
               page={page}
               rowsPerPage={rowsPerPage}

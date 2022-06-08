@@ -7,7 +7,7 @@ type Props = {
   type?: LoadingType;
 };
 
-export const Loading = ({
+export const ALoading = ({
   color = "#2191FB",
   width = 80,
   height = 80,

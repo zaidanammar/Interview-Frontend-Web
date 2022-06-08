@@ -1,27 +1,42 @@
 import React, { useState } from "react";
-import { Loading } from "../components/Loading";
-import Table from "../components/Table";
+
+import MTable from "../components/molecules/MTable";
+import { ALoading } from "../components/atoms/ALoading";
+import ASearchInput from "../components/atoms/ASearchInput";
 import { useFetchQuestionTwo } from "../hooks/question";
 
 const QuestionOne = () => {
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
-  const { data, isLoading, isError } = useFetchQuestionTwo();
+  const [search, setSearch] = useState("");
+
+  const { data, isLoading } = useFetchQuestionTwo();
+  const filteredData = data?.filter((question) =>
+    question.title.toLowerCase().includes(search)
+  );
 
   return (
     <section>
-      <aside>
+      <aside className="flex flex-col">
         <h3 className="text-textPrimary">Question 2</h3>
+        <div className="place-self-end w-1/3">
+          <ASearchInput search={search} setSearch={setSearch} />
+        </div>
       </aside>
-      <article className="my-10">
+
+      <article className="mt-5 mb-10">
         {isLoading ? (
           <div className="flex justify-center">
-            <Loading />
+            <ALoading />
           </div>
+        ) : filteredData && filteredData?.length <= 0 ? (
+          <p className="text-textPrimary text-sm mt-10 text-center">
+            Data not found.
+          </p>
         ) : (
-          data && (
-            <Table
-              data={data}
+          filteredData && (
+            <MTable
+              data={filteredData}
               page={page}
               rowsPerPage={rowsPerPage}
               setPage={setPage}

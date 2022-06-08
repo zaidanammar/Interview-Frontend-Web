@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { IQuestion } from "../core/question/entities";
-import Pagination from "./Pagination";
+import React from "react";
+import { IQuestion } from "../../core/question/entities";
+import MPagination from "./MPagination";
 
 const tableTitle = [
   "Product Name",
@@ -18,7 +18,13 @@ type Props = {
   setPage: (page: number) => void;
 };
 
-const Table = ({ data, rowsPerPage, setPage, setRowsPerPage, page }: Props) => {
+const MTable = ({
+  data,
+  rowsPerPage,
+  setPage,
+  setRowsPerPage,
+  page,
+}: Props) => {
   return (
     <div className="relative overflow-x-auto shadow-2xl bg-white rounded-2xl p-8">
       <table className="w-full text-sm text-left">
@@ -63,7 +69,7 @@ const Table = ({ data, rowsPerPage, setPage, setRowsPerPage, page }: Props) => {
         </tbody>
       </table>
 
-      <Pagination
+      <MPagination
         data={data}
         rowsPerPage={rowsPerPage}
         setPage={setPage}
@@ -73,4 +79,4 @@ const Table = ({ data, rowsPerPage, setPage, setRowsPerPage, page }: Props) => {
   );
 };
 
-export default Table;
+export default MTable;
