@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import MFooter from "../molecules/MFooter";
+import MNavbar from "../molecules/MNavbar";
 
 type Props = {
   children: ReactNode;
@@ -7,7 +8,8 @@ type Props = {
 
 const OContainer = ({ children }: Props) => {
   return (
-    <section className="w-10/12 ml-64 container mx-auto p-7">
+    <section className="sm:w-10/12 sm:ml-64 container mx-auto sm:p-7 p-4">
+      <MNavbar />
       {children}
       <MFooter />
     </section>

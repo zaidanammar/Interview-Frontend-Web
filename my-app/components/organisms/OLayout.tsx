@@ -7,7 +7,7 @@ type Props = {
 
 const OLayout = ({ children }: Props) => {
   return (
-    <main className="flex">
+    <main className="flex mx-auto">
       <Head>
         <title>Moduit</title>
         <meta property="og:title" content="Moduit" key="moduit" />

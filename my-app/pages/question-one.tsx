@@ -10,11 +10,11 @@ const QuestionOne = () => {
   const { data, isLoading } = useFetchQuestionOne();
 
   return (
-    <section>
+    <section className="sm:pt-0 pt-14">
       <aside>
         <h3 className="text-textPrimary">Question 1</h3>
       </aside>
-      <article className="my-14">
+      <article className="sm:my-14 my-8">
         {isLoading ? (
           <div className="flex justify-center">
             <ALoading />

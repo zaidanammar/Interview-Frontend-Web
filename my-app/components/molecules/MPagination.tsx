@@ -24,13 +24,13 @@ const MPagination = ({ data, rowsPerPage, setPage, setRowsPerPage }: Props) => {
   };
 
   return (
-    <nav className="mt-14 flex justify-between items-center">
+    <nav className="mt-14 flex justify-between items-center overflow-scroll whitespace-nowrap">
       <Paginate
         count={Math.ceil(data.length / rowsPerPage)}
         onChange={handleChangePage}
       />
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center justify-end gap-3">
         <p className="text-blue-600 text-sm">Show</p>
         <div className="flex">
           <select

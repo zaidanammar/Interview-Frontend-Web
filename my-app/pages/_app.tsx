@@ -6,18 +6,21 @@ import "../styles/globals.css";
 import MSidebar from "../components/molecules/MSidebar";
 import OLayout from "../components/organisms/OLayout";
 import OContainer from "../components/organisms/OContainer";
+import { ContextProvider } from "../context";
 
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <OLayout>
-        <MSidebar />
-        <OContainer>
-          <Component {...pageProps} />
-        </OContainer>
-      </OLayout>
+      <ContextProvider>
+        <OLayout>
+          <MSidebar />
+          <OContainer>
+            <Component {...pageProps} />
+          </OContainer>
+        </OLayout>
+      </ContextProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>
   );

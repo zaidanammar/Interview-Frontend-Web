@@ -16,10 +16,10 @@ const QuestionOne = () => {
   );
 
   return (
-    <section>
+    <section className="sm:pt-0 pt-14">
       <aside className="flex flex-col">
         <h3 className="text-textPrimary">Question 2</h3>
-        <div className="place-self-end w-1/3">
+        <div className="place-self-end sm:w-1/3 w-2/3">
           <ASearchInput search={search} setSearch={setSearch} />
         </div>
       </aside>
