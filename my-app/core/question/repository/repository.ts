@@ -8,7 +8,7 @@ export default class QuestionRepository implements IQuestionRepository {
   async getQuestionOne(): Promise<IQuestion[]> {
     try {
       const response = await Instance().get(`${this.QUESTION_ROUTE}/one`);
-      const { data } = response.data;
+      const { data } = response;
       return data;
     } catch (error) {
       throw error;
@@ -18,7 +18,7 @@ export default class QuestionRepository implements IQuestionRepository {
   async getQuestionTwo(): Promise<IQuestion[]> {
     try {
       const response = await Instance().get(`${this.QUESTION_ROUTE}/two`);
-      const { data } = response.data;
+      const { data } = response;
       return data;
     } catch (error) {
       throw error;

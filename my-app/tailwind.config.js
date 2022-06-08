@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'textPrimary': "#424242",
+        'textSecondary': "#adadad",
+
+      },
       boxShadow: {
         '2xl': '0 25px 50px -12px rgba(230,250,255,255)',
       }
@@ -27,7 +32,7 @@ module.exports = {
           fontWeight: 700
         },
         'h3': {
-          fontSize: theme('fontSize.md'),
+          fontSize: theme('fontSize.lg'),
           fontWeight: 700
         },
         'h4': {
